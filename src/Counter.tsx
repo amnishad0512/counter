@@ -25,7 +25,7 @@ function Counter() {
 
     return (
         <div className='flex flex-col gap-7 items-center'>
-            <h1 className={`text-3xl font-bold select-none cursor-pointer ${(count === 0 && action === 1) ? 'text-gray-800' : 'text-green-600'}`} onClick={handleReset} title='Click to Reset the app'>Counter App</h1>
+            <h1 className={`text-3xl font-bold select-none ${(count === 0 && action === 1) ? 'text-gray-800' : 'text-green-600 cursor-pointer'}`} onClick={handleReset} title='Click to Reset the app'>Counter App</h1>
             <div className="flex justify-center gap-4">
                 <button
                     onClick={() => countHandeler(0)}
@@ -35,18 +35,18 @@ function Counter() {
                     -
                 </button>
 
-                <div className="text-4xl font-bold  text-gray-800">{count}</div>
+                <div className="text-4xl font-bold text-gray-800 select-none">{count}</div>
 
                 <button
                     onClick={() => countHandeler(1)}
-                    className="bg-blue-400 hover:bg-blue-600 text-white px-4 p-2 rounded cursor-pointer"
+                    className="bg-blue-400 hover:bg-blue-600 text-white px-4 p-2 rounded cursor-pointer select-none"
                 >
                     +
                 </button>
             </div>
             <div className="flex justify-center gap-4">
-                <div className="text-xl font-semi-bold  text-gray-800">Increment/Decrement By</div>
-                <input type='text' className='border-1 rounded p-1 w-10 text-center' value={action} onChange={actionHandler} />
+                <div className="text-xl font-semi-bold text-gray-800 select-none">Increment/Decrement By</div>
+                <input type='text' className='border-1 rounded p-1 w-10 text-center select-none' value={action} onChange={actionHandler} />
             </div>
         </div>
     )
